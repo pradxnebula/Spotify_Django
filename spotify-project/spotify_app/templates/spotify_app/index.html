@@ -1,0 +1,468 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Spotify Clone</title>
+    <link rel="stylesheet" href="static/spotify_app/style.css">
+</head>
+
+<body>
+    <div class="flex">
+        <div style="sidebar-section">
+            <div class="initial-tab" style="position: fixed;">
+                <div class="initial-tab-upper">
+                    <div>
+                        <div><img class="upper" id="nav-icon" src="static/icons/1.png" alt="" style="margin-top: 19px;"></div>
+                        <div><img class="lower" id="nav-icon" src="static/icons/2.png" alt=""></div>
+                    </div>
+                    <div>
+                        <p class="home selected" style="margin-top: 22px; cursor: pointer;"
+                            onclick="showContent('content-1')">
+                            Home</p>
+                        <p class="search unselected" style="margin-top: 27px; cursor: pointer;"
+                            onclick="showContent('content-2')">
+                            Search</p>
+                    </div>
+                </div>
+                <div class="initial-tab-lower">
+                    <div class="flex">
+                        <div class="flex">
+                            <div><img id="nav-icon" src="static/icons/3.png" alt=""></div>
+                            <div>
+                                <p style="margin-left: -10px;color: #b3b3b3;">Your Library</p>
+                            </div>
+                        </div>
+                        <div class="flex" style="margin-left: 8rem;">
+                            <div><img id="nav-icon" src="static/icons/4.png" alt="" style="
+                        margin-right: -10px;
+                        margin-left: 60px;
+                    "></div>
+                            <div><img id="nav-icon" src="static/icons/5.png" alt=""></div>
+                        </div>
+                    </div>
+                    <div class="flex" style="margin-left: 16px;">
+                        <div>
+                            <p class="tagpill">Playlists</p>
+                        </div>
+                        <div>
+                            <p class="tagpill">Artists</p>
+                        </div>
+                        <div>
+                            <p class="tagpill">Albums</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="library-section">
+                    <div class="flex">
+                        <img src="static/icons/2.png" alt="" style="    width: 17px;
+                height: fit-content;
+                margin: 16.4px;">
+                        <p id="sub-text" style="margin-left: 18rem;">Recents</p>
+                    </div>
+
+                    <div class="flex" id="sidebar-pill-main">
+                        <div><img id="sidebar-pill-icon" src="/images/artist-1.png" alt=""></div>
+                        <div>
+                            <p id="side-head" style="color: #1ed760;">Liked Songs</p>
+                            <p id="side-sub">Playlist • 129 Songs</p>
+                        </div>
+                    </div>
+                    <div class="flex" id="sidebar-pill">
+                        <div><img id="sidebar-pill-icon" src="/images/ash-king.png" alt=""></div>
+                        <div>
+                            <p id="side-head">Felicity</p>
+                            <p id="side-sub">Playlist • Meet</p>
+                        </div>
+                    </div>
+                    <div class="flex" id="sidebar-pill">
+                        <div><img id="sidebar-pill-icon" src="/images/giveon.png" alt=""></div>
+                        <div>
+                            <p id="side-head">Down the line</p>
+                            <p id="side-sub">Playlist • Prad</p>
+                        </div>
+                    </div>
+                    <div class="flex" id="sidebar-pill">
+                        <div><img id="sidebar-pill-icon" src="/images/harry-styles.png" alt=""></div>
+                        <div>
+                            <p id="side-head">Soulscapee</p>
+                            <p id="side-sub">Playlist • Gautam</p>
+                        </div>
+                    </div>
+                    <div class="flex" id="sidebar-pill">
+                        <div><img id="sidebar-pill-icon" src="/images/image-1.png" alt=""></div>
+                        <div>
+                            <p id="side-head">When Chai Met Toast</p>
+                            <p id="side-sub">Playlist • 12 Songs</p>
+                        </div>
+                    </div>
+                    <div class="flex" id="sidebar-pill">
+                        <div><img id="sidebar-pill-icon" src="/images/image-2.png" alt=""></div>
+                        <div>
+                            <p id="side-head">Indie India</p>
+                            <p id="side-sub">Playlist • 29 Songs</p>
+                        </div>
+                    </div>
+                    <div class="flex" id="sidebar-pill">
+                        <div><img id="sidebar-pill-icon" src="/images/image-3.png" alt=""></div>
+                        <div>
+                            <p id="side-head">Halcyon</p>
+                            <p id="side-sub">Playlist • 41 Songs</p>
+                        </div>
+                    </div>
+                    <div class="flex" id="sidebar-pill">
+                        <div><img id="sidebar-pill-icon" src="/images/image-4.png" alt=""></div>
+                        <div>
+                            <p id="side-head">Jazz</p>
+                            <p id="side-sub">Playlist • 52 Songs</p>
+                        </div>
+                    </div>
+                    <div class="flex" id="sidebar-pill">
+                        <div><img id="sidebar-pill-icon" src="/images/image-5.png" alt=""></div>
+                        <div>
+                            <p id="side-head">The Local Train</p>
+                            <p id="side-sub">Playlist • 12 Songs</p>
+                        </div>
+                    </div>
+                    <div class="flex" id="sidebar-pill">
+                        <div><img id="sidebar-pill-icon" src="/images/image-6.png" alt=""></div>
+                        <div>
+                            <p id="side-head">Swifties</p>
+                            <p id="side-sub">Playlist • 13 Songs</p>
+                        </div>
+                    </div>
+                    <div class="flex" id="sidebar-pill">
+                        <div><img id="sidebar-pill-icon" src="/images/image-7.png" alt=""></div>
+                        <div>
+                            <p id="side-head">Retro Rakee</p>
+                            <p id="side-sub">Playlist • 14 Songs</p>
+                        </div>
+                    </div>
+                    <div class="flex" id="sidebar-pill">
+                        <div><img id="sidebar-pill-icon" src="/images/thumbnail.png" alt=""></div>
+                        <div>
+                            <p id="side-head">Indian Ocean</p>
+                            <p id="side-sub">Playlist • 19 Songs</p>
+                        </div>
+                    </div>
+                    <div class="flex" id="sidebar-pill">
+                        <div><img id="sidebar-pill-icon" src="/images/thumbnail.png" alt=""></div>
+                        <div>
+                            <p id="side-head">The Bombay Royale</p>
+                            <p id="side-sub">Playlist • 12 Songs</p>
+                        </div>
+                    </div>
+                    <div class="flex" id="sidebar-pill">
+                        <div><img id="sidebar-pill-icon" src="/images/thumbnail.png" alt=""></div>
+                        <div>
+                            <p id="side-head">aswekeepsearching</p>
+                            <p id="side-sub">Playlist • 15 Songs</p>
+                        </div>
+                    </div>
+                    <div class="flex" id="sidebar-pill">
+                        <div><img id="sidebar-pill-icon" src="/images/thumbnail.png" alt=""></div>
+                        <div>
+                            <p id="side-head">The Yellow Dairy</p>
+                            <p id="side-sub">Playlist • 18 Songs</p>
+                        </div>
+                    </div>
+                    <div class="flex" id="sidebar-pill">
+                        <div><img id="sidebar-pill-icon" src="/images/thumbnail.png" alt=""></div>
+                        <div>
+                            <p id="side-head">Crosswinds</p>
+                            <p id="side-sub">Playlist • 45 Songs</p>
+                        </div>
+                    </div>
+                    <div class="flex" id="sidebar-pill">
+                        <div><img id="sidebar-pill-icon" src="/images/thumbnail.png" alt=""></div>
+                        <div>
+                            <p id="side-head">Twin Strings</p>
+                            <p id="side-sub">Playlist • 33 Songs</p>
+                        </div>
+                    </div>
+                    <div class="flex" id="sidebar-pill">
+                        <div><img id="sidebar-pill-icon" src="/images/thumbnail.png" alt=""></div>
+                        <div>
+                            <p id="side-head">Mismatched</p>
+                            <p id="side-sub">Playlist • 12 Songs</p>
+                        </div>
+                    </div>
+                    <div class="flex" id="sidebar-pill">
+                        <div><img id="sidebar-pill-icon" src="/images/thumbnail.png" alt=""></div>
+                        <div>
+                            <p id="side-head">The Beatles</p>
+                            <p id="side-sub">Playlist • 10 Songs</p>
+                        </div>
+                    </div>
+                    <div class="flex" id="sidebar-pill">
+                        <div><img id="sidebar-pill-icon" src="/images/thumbnail.png" alt=""></div>
+                        <div>
+                            <p id="side-head">Giveon</p>
+                            <p id="side-sub">Playlist • 13 Songs</p>
+                        </div>
+                    </div>
+                    <div class="flex" id="sidebar-pill">
+                        <div><img id="sidebar-pill-icon" src="/images/thumbnail.png" alt=""></div>
+                        <div>
+                            <p id="side-head">Kanye West</p>
+                            <p id="side-sub">Playlist • 45 Songs</p>
+                        </div>
+                    </div>
+                    <div class="flex" id="sidebar-pill">
+                        <div><img id="sidebar-pill-icon" src="/images/thumbnail.png" alt=""></div>
+                        <div>
+                            <p id="side-head">ZAYN</p>
+                            <p id="side-sub">Playlist • 129 Songs</p>
+                        </div>
+                    </div>
+                    <div class="flex" id="sidebar-pill">
+                        <div><img id="sidebar-pill-icon" src="/images/thumbnail.png" alt=""></div>
+                        <div>
+                            <p id="side-head">Kanish Seth</p>
+                            <p id="side-sub">Playlist • 129 Songs</p>
+                        </div>
+                    </div>
+                    <div class="flex" id="sidebar-pill">
+                        <div><img id="sidebar-pill-icon" src="/images/thumbnail.png" alt=""></div>
+                        <div>
+                            <p id="side-head">Liked Songs</p>
+                            <p id="side-sub">Playlist • 129 Songs</p>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+        <div class="main-window-fixed" style="position: fixed;">
+            <div class="main-window" id="content-1" style="overflow: scroll;">
+                <div class="home-tabs">
+                    <div class="video-con">
+                    <video id="tab-vid" src="static/Y23meta.app-Crescendo 2023 _ SSCBS-(1080p) (online-video-cutter.com).mp4" autoplay loop muted></video>
+                </div>
+                    <div class="home-pill-grid">
+                        {% for trendingGenre in trendGenres%}
+                        <div class="home-pill">
+                            <div style="display: flex;">
+                                <img src="https://spotify-app-database.netlify.app/{{ trendingGenre.genreThumbnail }}" alt="" id="home-pill-img">
+                             <div id="home-pill-txt">{{trendingGenre.genreName}}</div>
+                            </div>
+                            <img src="static/icons/play-icon.png" alt="" id="hover-play_2">
+                        </div>
+                        {% endfor %}
+                    </div>
+                 
+                </div>
+                <div id="hidden-grad"></div>
+          
+          
+                <div class="category-head">
+                    <h1 id="category-title">Discover</h1>
+                    <img src="static/icons/right_arrow.png" alt="" class="right-arrow">
+                </div>
+            
+                <div class="flex" id="card-grid" style="overflow: scroll;">
+            {% comment %} template {% endcomment %}
+            {% for songCard in discover_cards %}
+                <div class="card-bg">
+                    <div><img id="artist-card-thumbnail" src="https://spotify-app-database.netlify.app/{{ songCard.songThumbnail}}" alt=""></div>
+                    <div><img id="hover-play" song-url="https://open.spotify.com/embed/track/7uZLUFqPgGqwzD5rzOl8Sa?utm_source=generators" src="static/icons/play-icon.png" alt=""></div>
+                    <div id="card-content">
+                        <div id="card-title-1">{{ songCard.songTitle}}</div>
+                        <div id="card-subtext">{{ songCard.songArtist}}</div>
+                    </div>
+                </div>
+            {% endfor %}
+            {% comment %} template {% endcomment %}
+                </div>
+                <div class="category-head">
+                    <h1 id="category-title">Indie India</h1>
+                    <img src="static/icons/right_arrow.png" alt="" class="right-arrow">
+                </div>
+                <div class="flex" id="card-grid" style="overflow: scroll;">
+                   
+           {% for songCard in indie_india_cards %}
+                  <div class="card-bg">
+                        <div><img id="card-thumbnail" src="https://spotify-app-database.netlify.app/{{ songCard.songThumbnail}}" alt=""></div>
+                        <div><img id="hover-play_1" song-url="" src="static/icons/play-icon.png" alt=""></div>
+                        <div id="card-content">
+                            <div id="card-title">{{ songCard.songTitle}}</div>
+                            <div id="card-subtext">{{ songCard.songArtist}}</div>
+                        </div>
+                    </div>
+            {% endfor %}
+                   
+                </div>
+                <div class="category-head">
+                    <h1 id="category-title">Podcasts</h1>
+                    <img src="static/icons/right_arrow.png" alt="" class="right-arrow">
+                </div>
+                <div class="flex" id="card-grid" style="overflow: scroll;">
+                   
+                    {% for songCard in podcast_cards %}
+                  <div class="card-bg">
+                    <div><img id="card-thumbnail" src="https://spotify-app-database.netlify.app/{{ songCard.songThumbnail}}" alt=""></div>
+                    <div><img id="hover-play_1" song-url="" src="static/icons/play-icon.png" alt=""></div>
+                        <div id="card-content">
+                            <div id="card-title">{{ songCard.songTitle}}</div>
+                            <div id="card-subtext">{{ songCard.songArtist}}</div>
+                        </div>
+                    </div>
+            {% endfor %}
+
+                </div>
+                <div class="category-head">
+                    <h1 id="category-title">Travels</h1>
+                    <img src="static/icons/right_arrow.png" alt="" class="right-arrow">
+                </div>
+                <div class="flex" id="card-grid" style="overflow: scroll;">
+                    
+              {% for songCard in travel_cards %}
+                    <div class="card-bg">
+                        <div><img id="card-thumbnail" src="https://spotify-app-database.netlify.app/{{ songCard.songThumbnail}}" alt=""></div>
+                          <div><img id="hover-play_1" song-url="" src="static/icons/play-icon.png" alt=""></div>
+                          <div id="card-content">
+                              <div id="card-title">{{ songCard.songTitle}}</div>
+                              <div id="card-subtext">{{ songCard.songArtist}}</div>
+                          </div>
+                      </div>
+              {% endfor %}
+
+                </div>
+                <div class="category-head">
+                    <h1 id="category-title">Indie Rock Drive</h1>
+                    <img src="static/icons/right_arrow.png" alt="" class="right-arrow">
+                </div>
+                <div class="flex" id="card-grid" style="overflow: scroll;">
+
+                    {% for songCard in rock_cards %}
+                    <div class="card-bg">
+                        <div><img id="card-thumbnail" src="https://spotify-app-database.netlify.app/{{ songCard.songThumbnail}}" alt=""></div>
+                          <div><img id="hover-play_1" song-url="" src="static/icons/play-icon.png" alt=""></div>
+                          <div id="card-content">
+                              <div id="card-title">{{ songCard.songTitle}}</div>
+                              <div id="card-subtext">{{ songCard.songArtist}}</div>
+                          </div>
+                      </div>
+              {% endfor %}
+
+                </div>
+                <div class="category-head">
+                    <h1 id="category-title">Kendrick Lamar</h1>
+                    <img src="static/icons/right_arrow.png" alt="" class="right-arrow">
+                </div>
+                <div class="flex" id="card-grid" style="overflow: scroll;">
+                    
+                    {% for songCard in kendrick_lamar_cards %}
+                    <div class="card-bg">
+                        <div><img id="card-thumbnail" src="https://spotify-app-database.netlify.app/{{ songCard.songThumbnail}}" alt=""></div>
+                          <div><img id="hover-play_1" song-url="" src="static/icons/play-icon.png" alt=""></div>
+                          <div id="card-content">
+                              <div id="card-title">{{ songCard.songTitle}}</div>
+                              <div id="card-subtext">{{ songCard.songArtist}}</div>
+                          </div>
+                      </div>
+              {% endfor %}
+
+                </div>
+                <div class="category-head">
+                    <h1 id="category-title">Pop</h1>
+                    <img src="static/icons/right_arrow.png" alt="" class="right-arrow">
+                </div>
+                <div class="flex" id="card-grid" style="overflow: scroll;">
+                  
+                    {% for songCard in pop_cards %}
+                    <div class="card-bg">
+                        <div><img id="card-thumbnail" src="https://spotify-app-database.netlify.app/{{songCard.songThumbnail}}" alt=""></div>
+                          <div><img id="hover-play_1" song-url="" src="static/icons/play-icon.png" alt=""></div>
+                          <div id="card-content">
+                              <div id="card-title">{{ songCard.songTitle}}</div>
+                              <div id="card-subtext">{{ songCard.songArtist}}</div>
+                          </div>
+                      </div>
+              {% endfor %}
+
+                </div>
+                <div class="category-head">
+                    <h1 id="category-title">Jazz</h1>
+                    <img src="static/icons/right_arrow.png" alt="" class="right-arrow">
+                </div>
+                <div class="flex" id="card-grid" style="overflow: scroll;margin-bottom: 9rem;">
+                    
+                    {% for songCard in jazz_cards %}
+                    <div class="card-bg">
+                        <div><img id="card-thumbnail" src="https://spotify-app-database.netlify.app/{{ songCard.songThumbnail}}" alt=""></div>
+                          <div><img id="hover-play_1" song-url="" src="static/icons/play-icon.png" alt=""></div>
+                          <div id="card-content">
+                              <div id="card-title">{{ songCard.songTitle}}</div>
+                              <div id="card-subtext">{{ songCard.songArtist}}</div>
+                          </div>
+                      </div>
+              {% endfor %}
+
+                </div>
+            </div>
+
+            <!-- search-tab -->
+            <div class="main-window" id="content-2" style="overflow: scroll;">
+
+                <h1 id="category-title">Browse All</h1>
+                <div class="genre-grid">
+                    {% for genreCard in genre_cards %}
+                    <div class="genre-cards" style="background-color:{{genreCard.genreColor}}">
+                        <div id="genre-text">{{ genreCard.genreName }}</div>
+                        <div><img id="genre-img" src="{{genreCard.genreThumbnail}}" alt="" style="width: 6rem;"></div>
+                    </div>
+                    {% endfor %}
+                </div>
+
+
+            </div>
+            <!-- search-tab -->
+
+
+
+
+        </div>
+    </div>
+    <div style="    
+    box-sizing: border-box;
+    display: block;
+    position: fixed;
+    width: -webkit-fill-available;
+    bottom: 0px;
+    margin-left: -6px;
+    height: 80px;
+    ">
+        <div>
+            <iframe id="spotifyembed_player" style="border-radius:12px;" src="" width="100%" height="150px"
+                frameBorder="0" allowfullscreen=""
+                allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture" loading="lazy" autoplay="1">
+            </iframe>
+        </div>
+    </div>
+    </div>
+    <script src="static/switch.js"></script>
+    <script>
+        function switchTab(tab) {
+         
+            document.querySelector('.home').style.color = 'black';
+            document.querySelector('.home').style.fontWeight = 'normal';
+            document.querySelector('.search').style.color = 'black';
+            document.querySelector('.search').style.fontWeight = 'normal';
+            document.querySelector('.' + tab).style.color = 'red';
+            document.querySelector('.' + tab).style.fontWeight = 'bold';
+        }
+    </script>
+    <script>
+        const iframe = document.getElementById("spotifyembed_player");
+        const playButtons = document.querySelectorAll("#hover-play");
+        playButtons.forEach((button) => {
+            button.addEventListener("click", function () {
+                const songUrl = this.getAttribute("song-url"); 
+                iframe.src = songUrl; 
+            });
+        });
+    </script>
+
+</html>
