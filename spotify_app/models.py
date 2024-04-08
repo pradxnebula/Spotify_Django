@@ -9,7 +9,6 @@ class SongCards(models.Model):
     songCategory = models.CharField(max_length=100, default='Uncategorized')
 
 
-
 class SongGenres(models.Model):
     genreName = models.TextField()
     genreThumbnail = models.TextField()
