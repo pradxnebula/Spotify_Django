@@ -16,12 +16,18 @@ Including another URLconf
 """
 from django.contrib import admin
 from django.urls import path
-
-from spotify_app.views import index, about, hello, add
+from spotify_app import views
+from spotify_app.views import index, client
 urlpatterns = [
     path('admin/', admin.site.urls),
     path('', index, name="home"),
-    path('about/', about),
-    path('hello/<str:first_name>/', hello),
-    path('add/<int:num1>/<int:num2>/', add),
+    path('client/', client, name="home"),
+    path('delete/<int:id>/',views.delete,name="delete"),
+    path('update/<int:id>/',views.update,name="update"),
+    path('spotify_app/update/updateSong/<int:id>/',views.updateSong,name="updateSong"),
+    path('add/',views.add, name="add"),
+    path('addSong/',views.addSong,name="addSong"),
 ]
+
+
+

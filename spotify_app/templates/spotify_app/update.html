@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="style.css" />
+    <title>Update Song</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap"
+      rel="stylesheet"
+    />
+
+    <style>
+      * {
+        font-family: poppins;
+      }
+
+      body {
+        background-color: black;
+        color: #fff;
+      }
+
+      #add-form {
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        margin: 5rem 19rem;
+        gap: 3rem;
+        margin-top: 5rem;
+      }
+
+      h1 {
+        text-align: center;
+        margin-top: 5rem;
+        color: #2aba5a;
+      }
+
+      .submit-btn {
+        margin: 19rem 19.8rem;
+        position: absolute;
+        padding: 11px 84px;
+        background: #2aba5a;
+        border: none;
+        border-radius: 10px;
+        margin-top: 26rem;
+      }
+
+      input,
+      select {
+        height: 41px;
+        text-align: center;
+      }
+    </style>
+  </head>
+
+  <body>
+    <h1>Update Song</h1>
+    <form
+      id="add-form"
+      action="{% url 'updateSong' songcards.id %}"
+      method="post"
+    >
+      {% csrf_token %}
+      <label for="songTitle">Song Title</label>
+      <input
+        id="songTitle"
+        type="text"
+        name="songTitle"
+        value="{{songcards.songTitle}}"
+      />
+      <label for="songArtist">Song Artist</label>
+      <input
+        id="songArtist"
+        type="text"
+        name="songArtist"
+        value="{{songcards.songArtist}}"
+      />
+      <label for="songThumbnail">Song Thumbnail Path</label>
+      <input
+        id="songThumbnail"
+        type="text"
+        name="songThumbnail"
+        value="{{songcards.songThumbnail}}"
+        placeholder="static/thumbnails/#filename"
+      />
+      <label for="songCategory">Song Genre</label>
+      <input
+        id="songThumbnail"
+        type="text"
+        name="songCategory"
+        value="{{songcards.songCategory}}"
+        placeholder="static/thumbnails/#filename"
+      />
+
+      {% comment %} <select
+        name=""
+        id=""
+        name="songCategory"
+        value="{{songcards.songCategory}}"
+      >
+        <option value="Indie India">Indie India</option>
+        <option value="Rock">Rock</option>
+        <option value="Podcasts">Podcasts</option>
+        <option value="Pop">Pop</option>
+        <option value="Travels">Travels</option>
+        <option value="Jazz">Jazz</option>
+        <option value="Discover">Discover</option>
+        <option value="Kendrick Lamar">Kendrick Lamar</option>
+      </select> {% endcomment %}
+      <input class="submit-btn" type="submit" value="SUBMIT" />
+    </form>
+  </body>
+</html>
