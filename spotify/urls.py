@@ -17,11 +17,11 @@ Including another URLconf
 from django.contrib import admin
 from django.urls import path
 from spotify_app import views
-from spotify_app.views import index, client
+from spotify_app.views import index
+
 urlpatterns = [
     path('admin/', admin.site.urls),
     path('', index, name="home"),
-    path('client/', client, name="home"),
     path('delete/<int:id>/',views.delete,name="delete"),
     path('update/<int:id>/',views.update,name="update"),
     path('spotify_app/update/updateSong/<int:id>/',views.updateSong,name="updateSong"),
